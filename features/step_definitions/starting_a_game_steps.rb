@@ -6,14 +6,3 @@ When(/^I follow "(.*?)"$/) do |link|
   click_link(link)
 end
 
-Then(/^I should see "(.*?)"$/) do |text|
-  expect(page).to have_content(text)
-end
-
-Given(/^I am on Start$/) do
-  visit '/start'
-end
-
-Given(/^I filled in the form$/) do
-  fill_in 'player01', with: 'Player01'
-end
